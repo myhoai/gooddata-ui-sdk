@@ -20,7 +20,7 @@ describe("Header section", () => {
             editMode.isInEditMode(false);
         });
 
-        it("can update header for all sections", { tags: ["checklist_integrated_tiger"] }, () => {
+        it("can update header for all sections", { tags: ["checklist_integrated_tiger_temp"] }, () => {
             new DashboardMenu().toggle().hasOption("Save as new");
             new DashboardHeader().saveAsNew("save a new dashboard");
             editMode.edit().isInEditMode();
@@ -53,7 +53,7 @@ describe("Header section", () => {
 
         it(
             "Header is removed after latest insight is deleted from a section",
-            { tags: ["pre-merge_isolated_tiger"] },
+            { tags: ["checklist_integrated_tiger"] },
             () => {
                 editMode.edit().isInEditMode();
                 insightCatalog.waitForCatalogReload();
@@ -65,7 +65,7 @@ describe("Header section", () => {
         );
     });
 
-    describe("Localization", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    describe("Localization", { tags: ["checklist_integrated_tiger"] }, () => {
         beforeEach(() => {
             Navigation.visit("dashboard/header-localization");
             editMode.isInEditMode(false).edit().isInEditMode();
@@ -75,7 +75,7 @@ describe("Header section", () => {
         //Cover ticket: RAIL-4674
         it(
             "Limitation of title, description",
-            { tags: ["checklist_integrated_tiger", "checklist_integrated_bear"] },
+            { tags: ["checklist_integrated_tiger_temp", "checklist_integrated_bear"] },
             () => {
                 cy.fixture("headerDataTest").then((data) => {
                     const title = data["LimitTexts"].title;

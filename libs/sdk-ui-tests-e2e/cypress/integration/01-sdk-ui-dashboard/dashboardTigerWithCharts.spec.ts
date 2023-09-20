@@ -4,7 +4,7 @@ import * as Navigation from "../../tools/navigation";
 import { Dashboard } from "../../tools/dashboards";
 import { Widget } from "../../tools/widget";
 
-describe("Dashboard with charts", { tags: ["pre-merge_isolated_tiger"] }, () => {
+describe("Dashboard with charts", { tags: ["checklist_integrated_tiger"] }, () => {
     describe("rendering", () => {
         beforeEach(() => {
             Navigation.visit("dashboard/dashboard-tiger-charts");
@@ -29,7 +29,7 @@ describe("Dashboard with charts", { tags: ["pre-merge_isolated_tiger"] }, () => 
     });
 });
 
-describe("Dashboard with pyramid and funnel charts", { tags: ["checklist_integrated_tiger"] }, () => {
+describe("Dashboard with pyramid and funnel charts", { tags: ["checklist_integrated_tiger_temp"] }, () => {
     beforeEach(() => {
         Navigation.visit("dashboard/dashboard-tiger-charts");
     });

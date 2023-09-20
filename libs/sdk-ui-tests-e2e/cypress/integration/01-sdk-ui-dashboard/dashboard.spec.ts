@@ -47,7 +47,7 @@ describe("Dashboard", { tags: ["pre-merge_isolated_bear"] }, () => {
         //Cover ticket: RAIL-4431
         it(
             "should display placeholder and focus title for new dashboard",
-            { tags: ["checklist_integrated_tiger", "checklist_integrated_bear"] },
+            { tags: ["checklist_integrated_tiger_temp", "checklist_integrated_bear"] },
             () => {
                 Navigation.visit("dashboard/new-dashboard");
                 dashboardHeader.hasTitlePlaceholder();
@@ -113,7 +113,7 @@ describe("Dashboard actions", () => {
     //Cover ticket: RAIL-4772
     it(
         "should able to delete dashboard after save as new",
-        { tags: ["checklist_integrated_tiger", "checklist_integrated_bear"] },
+        { tags: ["checklist_integrated_tiger_temp", "checklist_integrated_bear"] },
         () => {
             Navigation.visitCopyOf("dashboard/kpis");
 
@@ -129,7 +129,7 @@ describe("Dashboard actions", () => {
     //Cover ticket: RAIL-4642
     it(
         "should able to scroll vertical/ horizontal on widget",
-        { tags: ["checklist_integrated_tiger", "checklist_integrated_bear"] },
+        { tags: ["checklist_integrated_tiger_temp", "checklist_integrated_bear"] },
         () => {
             const table = new Table(".s-dash-item-0");
 
@@ -142,7 +142,7 @@ describe("Dashboard actions", () => {
     //Cover ticket: RAIL-4750
     it(
         "should direct to view mode after save as new",
-        { tags: ["checklist_integrated_tiger", "checklist_integrated_bear"] },
+        { tags: ["checklist_integrated_tiger_temp", "checklist_integrated_bear"] },
         () => {
             Navigation.visitCopyOf("dashboard/kpis");
             dashboardHeader.editButtonIsVisible(true).shareButtonExists(true);

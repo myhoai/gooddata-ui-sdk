@@ -6,7 +6,7 @@ import { Table } from "../../tools/table";
 const LEGEND_NAME_CSS = ".series-name";
 const TOOLTIP_TITLE_CSS = ".gd-viz-tooltip-title";
 
-describe("Shorten Metric Name", { tags: ["checklist_integrated_tiger"] }, () => {
+describe("Shorten Metric Name", { tags: ["checklist_integrated_tiger_temp"] }, () => {
     it(`check shorten in legend and tooltip in chart`, () => {
         Navigation.visit("visualizations/shortenmetricname/shorten-metric-name-chart-scenario");
         const chart = new Chart(".s-column-chart");

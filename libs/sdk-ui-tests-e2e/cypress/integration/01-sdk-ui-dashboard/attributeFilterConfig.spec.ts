@@ -82,7 +82,7 @@ describe("Attribute filter", () => {
     describe("Config attribute filter", () => {
         it(
             "Should reset display form value dropdown after cancel attribute panel",
-            { tags: ["checklist_integrated_tiger"] },
+            { tags: ["checklist_integrated_tiger_temp"] },
             () => {
                 Navigation.visit("dashboard/stage-name");
 

@@ -14,7 +14,7 @@ const widget = new Widget(0);
 
 const STAGE_NAME_CHECKBOX = ".s-stage_name";
 
-describe("Dashboard", { tags: ["pre-merge_isolated_tiger"] }, () => {
+describe("Dashboard", { tags: ["checklist_integrated_tiger"] }, () => {
     describe("TopBar rendering", () => {
         beforeEach(() => {
             cy.login();
@@ -49,7 +49,7 @@ describe("Dashboard", { tags: ["pre-merge_isolated_tiger"] }, () => {
         });
 
         //Cover ticket: RAIL-4702
-        it("Should enable Save button when resize column", { tags: ["checklist_integrated_tiger"] }, () => {
+        it("Should enable Save button when resize column", { tags: ["checklist_integrated_tiger_temp"] }, () => {
             Navigation.visit("dashboard/stage-name");
             editMode.edit();
             const table = new Table(".s-dash-item");
@@ -60,7 +60,7 @@ describe("Dashboard", { tags: ["pre-merge_isolated_tiger"] }, () => {
         //Cover ticket: RAIL-4728
         it(
             "Should reload widget after check/uncheck attribute filter",
-            { tags: ["checklist_integrated_tiger"] },
+            { tags: ["checklist_integrated_tiger_temp"] },
             () => {
                 const widgetConfig = new WidgetConfiguration(0);
 

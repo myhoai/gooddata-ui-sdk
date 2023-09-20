@@ -2,7 +2,7 @@
 import * as Navigation from "../../tools/navigation";
 import { Chart } from "../../tools/chart";
 
-describe("Funnel Chart", { tags: ["checklist_integrated_tiger"] }, () => {
+describe("Funnel Chart", { tags: ["checklist_integrated_tiger_temp"] }, () => {
     beforeEach(() => {
         Navigation.visit("visualizations/funnelchart/funnel-chart-scenario");
     });

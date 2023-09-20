@@ -21,7 +21,7 @@ describe("Insight on dashboard", () => {
 
     it(
         "can add 3 widgets into the same row to create a new section",
-        { tags: ["checklist_integrated_tiger"] },
+        { tags: ["checklist_integrated_tiger_temp"] },
         () => {
             new DashboardMenu().toggle().hasOption("Save as new");
             new DashboardHeader().saveAsNew("save after drag drop widgets");
@@ -44,7 +44,7 @@ describe("Insight on dashboard", () => {
         },
     );
 
-    it("shows placeholder text during drag", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("shows placeholder text during drag", { tags: ["checklist_integrated_tiger"] }, () => {
         //create a new row, between 2 existing rows
         dashboard.getRow(1).dragAbove("ComboChart");
         dashboard.hasPlaceholderText("Drop to create a new section");
@@ -65,7 +65,7 @@ describe("Insight on dashboard", () => {
         dashboard.hasPlaceholderText("Drop here");
     });
 
-    it("can remove widgets after drap&drop", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("can remove widgets after drap&drop", { tags: ["checklist_integrated_tiger"] }, () => {
         dashboard.getRow(2).scrollIntoView().addLast("ComboChart");
         dashboard.hasRowsCount(4);
 
@@ -76,7 +76,7 @@ describe("Insight on dashboard", () => {
     //Cover ticket: RAIL-4715
     it(
         "should able to resize widget when is placed next to other in one row",
-        { tags: ["checklist_integrated_tiger", "checklist_integrated_bear"] },
+        { tags: ["checklist_integrated_tiger_temp", "checklist_integrated_bear"] },
         () => {
             Navigation.visit("dashboard/insight");
             editMode.edit();

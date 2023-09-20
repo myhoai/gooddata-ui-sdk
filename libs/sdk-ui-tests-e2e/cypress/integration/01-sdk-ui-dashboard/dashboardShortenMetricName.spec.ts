@@ -6,7 +6,7 @@ import { Widget } from "../../tools/widget";
 const LEGEND_NAME_CSS = ".series-name";
 const TOOLTIP_TITLE_CSS = ".gd-viz-tooltip-title";
 
-describe("Dashboard Shorten Metric Name", { tags: ["checklist_integrated_tiger"] }, () => {
+describe("Dashboard Shorten Metric Name", { tags: ["checklist_integrated_tiger_temp"] }, () => {
     beforeEach(() => {
         Navigation.visit("dashboard/shorten-metric-name");
     });

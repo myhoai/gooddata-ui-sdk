@@ -2,7 +2,7 @@
 import * as Navigation from "../../tools/navigation";
 import { Chart } from "../../tools/chart";
 
-describe("Pyramid Chart", { tags: ["checklist_integrated_tiger"] }, () => {
+describe("Pyramid Chart", { tags: ["checklist_integrated_tiger_temp"] }, () => {
     beforeEach(() => {
         Navigation.visit("visualizations/pyramidchart/pyramid-chart-scenario");
     });

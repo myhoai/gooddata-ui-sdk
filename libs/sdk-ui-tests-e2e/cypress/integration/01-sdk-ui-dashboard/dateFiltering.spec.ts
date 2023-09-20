@@ -10,12 +10,12 @@ const dateFilter = new DateFilter();
 const editMode = new EditMode();
 
 describe("Date filtering", () => {
-    it("verify date filter default state", { tags: "checklist_integrated_tiger" }, () => {
+    it("verify date filter default state", { tags: "checklist_integrated_tiger_temp" }, () => {
         Navigation.visit("dashboard/new-dashboard");
         dateFilter.subtitleHasValue(DateFilterValue.THIS_MONTH);
     });
 
-    it("should update date filter value correctly", { tags: "checklist_integrated_tiger" }, () => {
+    it("should update date filter value correctly", { tags: "checklist_integrated_tiger_temp" }, () => {
         Navigation.visit("dashboard/dashboard-many-rows-columns");
         dateFilter.subtitleHasValue(DateFilterValue.ALL_TIME);
         dateFilter
@@ -24,7 +24,7 @@ describe("Date filtering", () => {
             .subtitleHasValue(DateFilterValue.THIS_YEAR);
     });
 
-    it("should display message on the top date filter panel", { tags: "checklist_integrated_tiger" }, () => {
+    it("should display message on the top date filter panel", { tags: "checklist_integrated_tiger_temp" }, () => {
         Navigation.visit("dashboard/dashboard-many-rows-columns");
         dateFilter.open().isDateFilterMessageVisibled(false).cancel();
         editMode.edit().isInEditMode(true);
@@ -33,7 +33,7 @@ describe("Date filtering", () => {
 
     it(
         "should reset the selected date filter on view mode when open edit mode",
-        { tags: "checklist_integrated_tiger" },
+        { tags: "checklist_integrated_tiger_temp" },
         () => {
             Navigation.visit("dashboard/dashboard-many-rows-columns");
             editMode.edit().isInEditMode(true);
@@ -51,7 +51,7 @@ describe("Date filtering", () => {
         },
     );
 
-    it("should display the selected date interval correctly", { tags: "checklist_integrated_tiger" }, () => {
+    it("should display the selected date interval correctly", { tags: "checklist_integrated_tiger_temp" }, () => {
         Navigation.visit("dashboard/dashboard-many-rows-columns");
 
         const dateFilterValues = [

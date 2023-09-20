@@ -10,7 +10,7 @@ const editMode = new EditMode();
 const widget = new Widget(0);
 const layout = new LayoutRow(0);
 
-describe("Basic actions on dashboard", { tags: ["pre-merge_isolated_tiger"] }, () => {
+describe("Basic actions on dashboard", { tags: ["checklist_integrated_tiger"] }, () => {
     beforeEach(() => {
         Navigation.visit("dashboard/insight");
         editMode.edit().isInEditMode();

@@ -27,12 +27,12 @@ describe("Insights on dashboard", () => {
     });
 
     //CL-10262: Save&Publish button is enabled right when selecting insight
-    it("should disable save button if having no change", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("should disable save button if having no change", { tags: ["checklist_integrated_tiger"] }, () => {
         widget.waitChartLoaded().getChart();
         editMode.saveButtonEnabled(false);
     });
 
-    it("has insight placeholder title", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("has insight placeholder title", { tags: ["checklist_integrated_tiger"] }, () => {
         insightCatalog.waitForCatalogLoad();
         widget
             .waitChartLoaded()
@@ -42,7 +42,7 @@ describe("Insights on dashboard", () => {
             });
     });
 
-    it("shows a message if there is no data match", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("shows a message if there is no data match", { tags: ["checklist_integrated_tiger"] }, () => {
         insightCatalog
             .waitForCatalogReload()
             .searchText('<a href="http://www.w3schools.com">Go!</a>')
@@ -59,12 +59,12 @@ describe("Insights on dashboard", () => {
             .tabIsActive("all", true);
     });
 
-    it("Should show no data message if insight has no data", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("Should show no data message if insight has no data", { tags: ["checklist_integrated_tiger"] }, () => {
         new DateFilter().open().selectRelativePreset("this-week").apply();
         widget.waitChartLoaded().getChart().hasNoDataForFilter();
     });
 
-    it("(SEPARATE) can rename an existing insight", { tags: ["pre-merge_isolated_tiger"] }, () => {
+    it("(SEPARATE) can rename an existing insight", { tags: ["checklist_integrated_tiger"] }, () => {
         widget.waitChartLoaded();
         cy.fixture("widgetName").then((data) => {
             data.forEach((result: { widgetName: string }) => {
@@ -95,7 +95,7 @@ describe("Date filtering on insight", () => {
 
     it(
         "remember last setting after selecting another insight",
-        { tags: ["checklist_integrated_tiger"] },
+        { tags: ["checklist_integrated_tiger_temp"] },
         () => {
             widget.waitChartLoaded();
 
@@ -108,7 +108,7 @@ describe("Date filtering on insight", () => {
         },
     );
 
-    it("disable date filter", { tags: ["checklist_integrated_tiger"] }, () => {
+    it("disable date filter", { tags: ["checklist_integrated_tiger_temp"] }, () => {
         widget.waitChartLoaded();
         widgetConfiguration
             .open()
@@ -118,7 +118,7 @@ describe("Date filtering on insight", () => {
             .isDateDatasetDropdownExist(false);
     });
 
-    it("enable date filter", { tags: ["checklist_integrated_tiger"] }, () => {
+    it("enable date filter", { tags: ["checklist_integrated_tiger_temp"] }, () => {
         widget.waitChartLoaded();
         widgetConfiguration
             .open()
@@ -129,7 +129,7 @@ describe("Date filtering on insight", () => {
             .isDateDatasetDropdownExist(true);
     });
 
-    it("change filter on added insight", { tags: ["checklist_integrated_tiger"] }, () => {
+    it("change filter on added insight", { tags: ["checklist_integrated_tiger_temp"] }, () => {
         widget.waitChartLoaded();
         widgetConfiguration.open().openConfiguration().selectDateDataset(DATASET_CREATED);
 
@@ -147,7 +147,7 @@ describe("Date filter with editmode", () => {
         editMode.isInEditMode(false).edit().isInEditMode();
     });
 
-    it("remember date filter after saving", { tags: ["checklist_integrated_tiger"] }, () => {
+    it("remember date filter after saving", { tags: ["checklist_integrated_tiger_temp"] }, () => {
         secondWidget.waitChartLoaded();
         secondWidgetConfiguration
             .open()
